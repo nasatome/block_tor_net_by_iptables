@@ -8,7 +8,13 @@ usage:
 
 > block_tor_iptables.sh eth0 80 443 22 21
 
-> block_tor_iptables.sh null 80 443 22 21    
+> block_tor_iptables.sh null 80 443 22 21  
+
+In Crontab:
+
+- 1 -> crontab -e
+- 2 -> add
+> 25 1 * * * sudo /path/to/file/block_tor_net_by_iptables/block_tor_iptables.sh eth0 80 443 21 22 >> /path/to/file/block_tor_net_by_iptables/output.log  
 
 ####Requirements
 - root user
