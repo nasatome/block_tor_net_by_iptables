@@ -80,8 +80,6 @@ echo $(cat ${IP_TOR_LIST} | sort -u) > ${IP_TOR_LIST}
 
 for IP in $(cat ${IP_TOR_LIST})
 do
-    echo "check for DENY $IP"
-
     if ! grep -qFe "Anywhere DENY $IP" "$UFW_STATUS" ;
         then
             echo "IP to Block--> $IP"
